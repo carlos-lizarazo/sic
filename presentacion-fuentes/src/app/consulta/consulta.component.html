@@ -1,0 +1,25 @@
+<h2>Listado de encuestas</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Identificador</th>
+      <th scope="col">N&uacute;mero de documento</th>
+      <th scope="col">Correo electr&oacute;nico</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Comentarios</th>
+      <th scope="col">Fecha de respuesta</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let encuesta of encuestas">
+      <td>{{encuesta.id}}</td>
+      <td>{{encuesta.numeroDocumento}}</td>
+      <td>{{encuesta.email}}</td>
+      <td>{{encuesta.idMarcaFavorita}}</td>
+      <td>{{encuesta.comentarios}}</td>
+      <td>{{encuesta.fecha}}</td>
+      <td><button class="btn btn-primary" (click)="borrarEncuesta(encuesta)" >Borrar</button></td>
+    </tr>
+  </tbody>
+</table>

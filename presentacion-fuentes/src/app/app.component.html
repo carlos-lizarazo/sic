@@ -1,0 +1,6 @@
+<h1>Presentaci&oacute;n SIC</h1>
+<nav *ngIf="autenticado" class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1" [routerLink]="['/formulario']">Formulario</span>
+  <span class="navbar-brand mb-0 h1" [routerLink]="['/listaEncuestas']">Lista Encuestas</span>
+</nav>
+<router-outlet></router-outlet>

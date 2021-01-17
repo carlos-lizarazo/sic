@@ -1,0 +1,28 @@
+<h2>Formulario de encuesta</h2>
+<div class="input-group mb-3">
+  <label class="input-group-text" >N&uacute;mero de documento</label>
+  <input type="text" class="form-control" placeholder="sin puntos o comas" [(ngModel)]="encuesta.numeroDocumento">
+</div>
+
+<div class="input-group mb-3">
+  <label class="input-group-text" >Correo electr&oacute;nico</label>
+  <input type="text" class="form-control" [(ngModel)]="encuesta.email">
+</div>
+
+<div class="input-group mb-3">
+  <label class="input-group-text" >Comentarios</label>
+  <input type="text" class="form-control" [(ngModel)]="encuesta.comentarios">
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Marca Favorita</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="encuesta.idMarcaFavorita">
+    <option *ngFor="let marca of marcas" [value]="marca.id">{{marca.nombre}}</option>
+  </select>
+</div>
+
+<div class="input-group mb-3">
+  <button class="btn btn-primary" (click)="enviarEncuesta()" >Enviar</button>
+</div>
